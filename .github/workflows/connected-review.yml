@@ -12,7 +12,7 @@ on:
 
 env:
   TRADECRAFT_REPOSITORY: Grimblaz-and-Friends/tradecraft
-  TRADECRAFT_REVIEWER_REF: 2a4ac2577d9bd59a58dac93985492743d4932af3
+  TRADECRAFT_REVIEWER_REF: 9042a1246ffca1efa235c9d7685af5fe2b7a27e7
   CLAUDE_CLI_VERSION: 2.1.280
   CONNECTED_REVIEW_PRELOAD_CHANGED_FILES: ${{ vars.CONNECTED_REVIEW_PRELOAD_CHANGED_FILES }}
   REVIEW_OWNER_LOGIN: Grimblaz
@@ -97,8 +97,7 @@ jobs:
     permissions:
       actions: read
       contents: read
-      issues: write
-      pull-requests: read
+      pull-requests: write
     steps:
       - name: Fetch trusted reporter
         uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
