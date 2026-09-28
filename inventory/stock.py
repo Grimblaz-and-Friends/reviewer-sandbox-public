@@ -23,3 +23,6 @@ class Ledger:
         """Move stock between SKUs; either both sides change or neither does."""
         self.add(target, qty)
         self.remove(source, qty)
+
+    def total(self) -> int:
+        return sum(self._items.values())
