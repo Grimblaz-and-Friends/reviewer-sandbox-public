@@ -18,3 +18,6 @@ class Ledger:
 
     def count(self, sku: str) -> int:
         return self._items.get(sku, 0)
+
+    def rename_each(self, prefix: str) -> None:
+        self._items = {prefix + k: v for k, v in self._items.items() if k}
