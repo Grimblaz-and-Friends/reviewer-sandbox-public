@@ -18,3 +18,9 @@ class Ledger:
 
     def count(self, sku: str) -> int:
         return self._items.get(sku, 0)
+
+    def clear(self, sku: str) -> None:
+        del self._items[sku]
+
+    def skus(self):
+        return list(self._items)
