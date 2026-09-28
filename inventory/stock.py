@@ -21,3 +21,6 @@ class Ledger:
 
     def clear(self, sku: str) -> None:
         del self._items[sku]
+
+    def skus(self):
+        return list(self._items)
