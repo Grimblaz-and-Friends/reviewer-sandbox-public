@@ -18,3 +18,6 @@ class Ledger:
 
     def count(self, sku: str) -> int:
         return self._items.get(sku, 0)
+
+    def drain(self, sku: str) -> int:
+        return self._items.pop(sku)
