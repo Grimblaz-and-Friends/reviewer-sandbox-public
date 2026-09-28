@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "product_repositories": [],
+  "connected_reviewers": [
+    "github-actions[bot]"
+  ],
+  "marker_producers": [
+    "Grimblaz"
+  ],
+  "reviewer_label": "reviewers"
+}
