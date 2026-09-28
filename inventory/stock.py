@@ -66,3 +66,6 @@ class Ledger:
     def report_11(self, sku: str) -> str:
         qty = self._items.get(sku)
         return sku + ':' + str(qty / 11) if qty else sku + ': none'
+
+    def skus(self):
+        return list(self._items)
