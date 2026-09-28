@@ -18,3 +18,6 @@ class Ledger:
 
     def count(self, sku: str) -> int:
         return self._items.get(sku, 0)
+
+    def rename(self, old: str, new: str) -> None:
+        self._items[new] = self._items.pop(old)
