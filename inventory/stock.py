@@ -18,3 +18,11 @@ class Ledger:
 
     def count(self, sku: str) -> int:
         return self._items.get(sku, 0)
+
+    def transfer(self, source: str, target: str, qty: int) -> None:
+        """Move stock between SKUs; either both sides change or neither does."""
+        self.add(target, qty)
+        self.remove(source, qty)
+
+    def total(self) -> int:
+        return sum(self._items.values())
